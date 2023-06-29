@@ -78,9 +78,33 @@ A internet foi criada em 1969 devido a guerra fria entre EUA e União Soviética
 
 Internet é a rede mundial é a rede das redes.
 
-TCP/IP
+Dentro da internet temos servidores especializados em determinados tipos de serviços ou protocolos (FTP, GOPHER, SMTP, POP3, IMAP, HTTP). O WWW - Word Wide Web criada em 1993/1994 é uma sub-rede da internet é a parte da internet especializada em HTTP.
+
+Para acesso a internet precisamos de um modem, ele é responsavel pelo conversão dos sinais entre o computado e a internet. Computador gera/aceita ondas quadradas (binarios) já a internet reconhecem sinais/ondas senoidais a transformação destes sinais é chamada de `modulação` e `demodulação`.
+
+2.1 **IP - Internet Protocol**
+
+O endereço IP é o identificador que permite que as informações sejam enviadas entre dispositivos em uma rede. A Internet precisa de um meio de distinguir diferentes computadores, roteadores e sites. O endereço IP providencia isso, além de ser uma parte essencial do funcionamento da Internet.
+
+Um endereço IP é uma sequência de números separados por pontos. O endereço IP é representado por um conjunto de quatro números: por exemplo, 192.158.1.38. Cada número do conjunto pode variar entre 0 e 255. Ou seja, o intervalo de endereçamento IP vai de 0.0.0.0 a 255.255.255.255.
+
+Os números do endereço IP não são aleatórios. Eles são matematicamente gerados e atribuídos pela IANA (Internet Assigned Numbers Authority, autoridade de números atribuídos à Internet), um departamento da ICANN (Internet Corporation for Assigned Names and Numbers, corporação da Internet para atribuição de nomes e números). A ICANN é uma organização sem fins lucrativos que foi fundada nos Estados Unidos em 1998 para ajudar a manter a segurança da Internet e possibilitar seu uso por todos.
+
+O protocolo de Internet funciona da mesma forma como qualquer outra linguagem, comunicando-se com base em diretrizes definidas para encaminhar informações. Todos os dispositivos encontram, enviam e trocam informações com outros dispositivos conectados usando esse protocolo. Ao falar a mesma linguagem, qualquer computador em qualquer local pode conversar com outro.
+
+Ao acessar um site no navegador através uma URL como por exemplo *github.com* é realizado a busca do endereço do IP registrado nesta URL no servidor DNS para realizar acesso através do IP ao endereço desejado
+
+2.2 **DNS - Domain Name System**
+
+Um serviço DNS é um serviço globalmente distribuído que converte nomes legíveis por humanos, como *www.exemplo.com*, em endereços IP numéricos, como 192.0.2.1, usados pelos computadores para se conectarem entre si.  
+O sistema DNS da internet funciona praticamente como uma agenda de telefone ao gerenciar o mapeamento entre nomes e números. Os servidores DNS convertem solicitações de nomes em endereços IP, controlando qual servidor um usuário final alcançará quando digitar um nome de domínio no navegador da web. Essas solicitações são chamadas consultas.
+
+
+
 
 Ciração destes protocolos para controlar a rede.
+
+TCP
 
 HTTP
 
@@ -90,15 +114,23 @@ Linguagem de marcação Html
 
 WWW - Word Wide Web
 
-Dentro da internet temos servidores especializados em determinados tipos de serviços ou protocolos (FTP, GOPHER, SMTP, POP3, IMAP, HTTP). O WWW - Word Wide Web criada em 1993/1994 é uma sub-rede da internet é a parte da internet especializada em HTTP.
-
 Navegadores - primeiro navegar mosaik
+
+> [YouTube Guanabara - Internet I](https://youtu.be/F74GKCLXUWM)
+
+> [YouTube Guanabara - Internet II](https://youtu.be/nlO5hySqJFA)
+
+> [YouTube Guanabara - Internet III](https://youtu.be/RFHSt1PCy0k)
 
 ## Git e GitHub
 
 Aprender como funciona o Git e Github.
 
-> [Comandos básicos para Git Bash](https://github.com/lexusmem/Comandos_Git_Cmd.git)
+> [Youtube Ignôrancia Zero - Git e Github - Setup](https://youtu.be/alxRKszfTck)
+
+> [Youtube Ignôrancia Zero - Curso Git e Github](https://youtube.com/playlist?list=PLfCKf0-awunORbTiGbKnp7MlkXbT5lk1y)
+
+> [Alex - Comandos básicos para Git Bash](https://github.com/lexusmem/Comandos_Git_Cmd.git)
 
 > [Curso Git e GitHub Guanabara - Curso em Video](https://www.cursoemvideo.com/curso/curso-de-git-e-github/)
 
