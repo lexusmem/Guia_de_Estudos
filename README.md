@@ -16,25 +16,89 @@ Devemos entender como a internet está estruturada Protocolos de Rede HTTP/HTTPS
 
 **1. Computador**
 
+1.1 **Linguagem da Máquina**
+
+Os computadores são equipamentos eletrônicos, ou seja, significa que funcionam através da eletricidade. Nesse sentido, todos os dados do computador são transportados em minúsculos fluxos de eletricidade, chamados corrente elétrica. Esse processo acontece pelo barramento de dados, nele acontece a troca de dados, sejam eles de entrada ou saída.
+
+E, os microprocessadores possuem milhares ou milhões de pequenos dispositivos eletrônicos, chamados transistores e esses componentes agem como interruptores, controlando o fluxo das correntes elétricas durante o uso do computador. Além disso, os computadores usam essas correntes elétricas para representar os números 0 e 1 (código binário).
+
+Somente esses dois números são utilizados, porque os transistores, assim como os interruptores de luz, possuem apenas duas posições: ligado ou desligado. Dessa forma, o transistor ligado (1) representa um dos números; o desligado (0) representa o outro.
+
+Nossos equipamentos, os computadores, usam séries de 0 e 1 para compor letras, sons e quaisquer outros dados, sendo essa a linguagem pela qual o hardware e software se comunicam. Por exemplo, o computador armazena (Linguagem de Máquina) a palavra dog (“cachorro”, em inglês) desta forma: 01100100 (d), 01101111 (o) e 01100111 (g).
+
+Em outras palavras, os computadores somente leem os números 0 e 1. Portanto, todas as instruções que um computador segue são formadas por séries de combinações desses dois números.
+
+Como não há como padronizar o nível do conhecimento dos usuários, sabe-se que para as pessoas é difícil trabalhar com séries extensas de números. Então, os técnicos que escrevem programas de computador, chamados programadores, criaram suas próprias linguagens que visam converter as linhas de códigos em binários.
+
+1.2 **Codigo Binário**
+
+Máquinas identificam dois estados de acordo com os sinais elétricos, que são o desligado e ligado, o nosso 0 e 1, ou simplesmente o sistema binário
+
+Na computação, toda a informação é processada pela máquina através do código binário, que usa como base o sistema binário para converter os valores 0 e 1 dos pulsos elétricos em informações.
+
+O *binary digit* (dígito binário) é o 1 bit. É a menor unidade de informação do computador. Ela pode ser compartilhada ou armazenada em banco de dados com os valores 0 e 1.
+
+Já o byte, consiste no agrupamento (soma) de 8 bits para facilitar o processo das informações que são enviadas ao computador. Além dele, existem ainda: kilobyte (8.192 bits), megabyte (8.388.608 bits), gigabyte (8.589.934.592) e terabyte (8.796.093.022.208).
+
+Ao observar o termo “binário”, podemos ter uma ideia do que ele é. “Bi” é igual a dois e “nário” significa número. O código binário é composto por dois números, o 0 e o 1. Isso significa que somente esses dois números são usados para representar todos os caracteres do computador, incluindo as letras, caracteres especiais e números.
+
+Então o numero 14 será representando pelo conjunto de número binario `1110`.
+
+~~~~
+14(base10) = 1110(base2)
+
+14 / 2 = 7 resto **0**  
+7 / 2 = 3 resto **1**  
+3 / 2 = **1** resto **1**  
+~~~~
+
+E o numero 36 será representando pelo conjunto de número binario `100100`.
+
+~~~~
+36(base10) = 100100(base2)
+
+36 / 2 = 18 resto **0**  
+18 / 2 = 9 resto **0**  
+9 / 2 = 4 resto **1**  
+4 / 2 = 2 resto **0**  
+2 / 2 = **1** resto **0**  
+~~~~
+
+Quando falamos em textos, também podemos criá-los por meio do código binário. Ao usá-lo, podemos formar uma palavra, um livro e até uma mensagem criptografada. Para isso, existe a tabela ASCII — American Standard Code for Information Interchange — criada por Robert W. Bemer. 
+
+Ela tem uma escala que vai de 0 a 127 e cada elemento corresponde a um caractere. Com isso, conseguimos atribuir um valor numérico para as letras, além dos acentos, símbolos e teclas de funções. Porém, ainda é necessário converter os valores da tabela ASCII para o código binário das letras.
+
+> [Tabela ASCII](https://web.fe.up.pt/~ee96100/projecto/Tabela%20ascii.htm)
+
+Para isso, basta utilizar o código da ASCII que corresponde ao caractere em questão. Por exemplo: o **“T”** maiúsculo corresponde ao decimal 84. Então, para convertê-lo para números binários, basta realizar o processo anteriormente, dividindo por 2. Neste caso, o resultado será 1010100.   
+
 **2. Internet**
 
-A internet foi criada devida a guerra fria entre EUA e União Soviética.  
+A internet foi criada em 1969 devido a guerra fria entre EUA e União Soviética. Nos EUA nasceu a ARPANET criada pela DARPA, pequena rede com apenas 4 pontos.  
 
-Nos EUA nasceu a ARPANET criada pela DARPA.  
-
-WWW - Word Wide Web
+Internet é a rede mundial é a rede das redes.
 
 TCP/IP
 
-Html
+Ciração destes protocolos para controlar a rede.
 
-HTTP e HTPPS
+HTTP
+
+Nova tecnologia os protocolos HTTP e HTPPS integradas ao TCP/IP.
+
+Linguagem de marcação Html
+
+WWW - Word Wide Web
+
+Dentro da internet temos servidores especializados em determinados tipos de serviços ou protocolos (FTP, GOPHER, SMTP, POP3, IMAP, HTTP). O WWW - Word Wide Web criada em 1993/1994 é uma sub-rede da internet é a parte da internet especializada em HTTP.
+
+Navegadores - primeiro navegar mosaik
 
 ## Git e GitHub
 
 Aprender como funciona o Git e Github.
 
-> [Comandos para básicos Git Bash](https://github.com/lexusmem/Comandos_Git_Cmd.git)
+> [Comandos básicos para Git Bash](https://github.com/lexusmem/Comandos_Git_Cmd.git)
 
 > [Curso Git e GitHub Guanabara - Curso em Video](https://www.cursoemvideo.com/curso/curso-de-git-e-github/)
 
