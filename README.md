@@ -10,9 +10,9 @@ Devemos entender como a internet está estruturada Protocolos de Rede HTTP/HTTPS
 
 > [Protocolos de Rede](https://medium.com/@christiancost47/protocolos-de-rede-quem-s%C3%A3o-o-que-fazem-onde-vivem-5f7ef43aa526)
 
-> [Pdf - Historia da Internet]()
+> [Pdf - Historia da Internet](https://github.com/lexusmem/Guia_de_Estudos/blob/778b97bbc8172e1b18eba6ec756d4558f597347f/01%20-%20Hist%C3%B3ria%20da%20Internet.pdf)
 
-> [Pdf - Como Funciona a Internet]()
+> [Pdf - Como Funciona a Internet](https://github.com/lexusmem/Guia_de_Estudos/blob/778b97bbc8172e1b18eba6ec756d4558f597347f/02%20-%20Como%20funciona%20a%20Internet.pdf)
 
 **1. Computador**
 
