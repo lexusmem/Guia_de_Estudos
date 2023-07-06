@@ -1,6 +1,6 @@
 # Guia de Estudos
 
-Guia sugerido pelo Fiasco através do Yutube.
+Guia sugerido pelo Fiasco através do Youtube.
 
 > [YouTube Fiasco - Guia de Estudos](https://www.youtube.com/watch?v=A1BaZr82XJI)
 
@@ -39,7 +39,7 @@ Em outras palavras, os computadores somente leem os números 0 e 1. Portanto, to
 
 Como não há como padronizar o nível do conhecimento dos usuários, sabe-se que para as pessoas é difícil trabalhar com séries extensas de números. Então, os técnicos que escrevem programas de computador, chamados programadores, criaram suas próprias linguagens que visam converter as linhas de códigos em binários.
 
-1.2 **Codigo Binário**
+1.2 **Código Binário**
 
 Máquinas identificam dois estados de acordo com os sinais elétricos, que são o desligado e ligado, o nosso 0 e 1, ou simplesmente o sistema binário
 
@@ -51,7 +51,7 @@ Já o byte, consiste no agrupamento (soma) de 8 bits para facilitar o processo d
 
 Ao observar o termo “binário”, podemos ter uma ideia do que ele é. “Bi” é igual a dois e “nário” significa número. O código binário é composto por dois números, o 0 e o 1. Isso significa que somente esses dois números são usados para representar todos os caracteres do computador, incluindo as letras, caracteres especiais e números.
 
-Então o numero 14 será representando pelo conjunto de número binario `1110`.
+Então o numero 14 será representando pelo conjunto de número binário `1110`.
 
 ~~~~
 14(base10) = 1110(base2)
@@ -61,7 +61,7 @@ Então o numero 14 será representando pelo conjunto de número binario `1110`.
 3 / 2 = **1** resto **1**  
 ~~~~
 
-E o numero 36 será representando pelo conjunto de número binario `100100`.
+E o numero 36 será representando pelo conjunto de número binário `100100`.
 
 ~~~~
 36(base10) = 100100(base2)
@@ -89,7 +89,7 @@ Internet é a rede mundial é a rede das redes.
 
 Dentro da internet temos servidores especializados em determinados tipos de serviços ou protocolos (FTP, GOPHER, SMTP, POP3, IMAP, HTTP). O WWW - Word Wide Web criada em 1993/1994 é uma sub-rede da internet é a parte da internet especializada em HTTP.
 
-Para acesso a internet precisamos de um modem, ele é responsavel pelo conversão dos sinais entre o computado e a internet. Computador gera/aceita ondas quadradas (binarios) já a internet reconhecem sinais/ondas senoidais a transformação destes sinais é chamada de `modulação` e `demodulação`.
+Para acesso a internet precisamos de um modem, ele é responsável pelo conversão dos sinais entre o computado e a internet. Computador gera/aceita ondas quadradas (binários) já a internet reconhecem sinais/ondas senoidais a transformação destes sinais é chamada de `modulação` e `demodulação`.
 
 2.1 **IP - Internet Protocol**
 
@@ -214,7 +214,7 @@ A URL como por exemplo *https://www.github.com/lexusmes* são dividas em partes 
 
 *https://* -> scheme  
 *www* -> sub-domínio  
-*githug.com* -> domíno  
+*githug.com* -> domínio  
 *.com* -> TLD  
 */lexusmem* -> caminho  
 
@@ -310,7 +310,7 @@ O TLD de código de país traz a localização ou o código ISO do território. 
 .id – Indonésia.  
 .me – Montenegro.  
 
-*Infrastrutura de Top-Level Domain*
+*Infraestrutura de Top-Level Domain*
 
 A primeira e única infraestrutura de Top-Level Domain é a ARPA. Ela significa Address and Routing Paramenter Area (Área de Parâmetro de Endereço e Roteamento, numa tradução livre).
 
@@ -330,17 +330,166 @@ Tim Berners-Lee, que foi um dos pioneiros no uso do hipertexto como forma de com
 
 A web, entretanto, só explodiu realmente em popularidade com a introdução do NCSA 'Mosaic, que era um navegador gráfico (em oposição a navegadores de modo texto) rodando originalmente no Unix, mas que foi também portado para o Macintosh e Microsoft Windows logo depois. A versão 1.0 foi liberada em setembro de 1993.
 
+## Lógica de Programação
+
+Lógica de programação (ou, por extensão, lógica computacional) é uma forma de organizar pensamentos que permite a tradução do raciocínio lógico humano para a linguagem das máquinas, permitindo que elas realizem alguma determinada tarefa.
+
+Lógica de Programação é uma técnica que permite você desenvolver uma sequência de instruções que visam atingir um determinado objetivo.
+
+Isso quer dizer que, dentro da lógica de programação, você possui diversos conceitos que te permitirão escrever instruções, em forma de algoritmos, que irão guiar a máquina a fazer o que você desejar.
+
+1. **Algorítimo**
+
+ algoritmo é a própria sequência de instruções que irão permitir você atingir seu objetivo. Ela basicamente é o mapa, roteiro, guia que vai permitir a máquina compreender o que deve ser feito.
+
+É possível pegar qualquer coisa que a gente faz cotidianamente e transformar em um algoritmo. Basta entender os processos realizados e conseguimos criá-lo. Vamos tomar como exemplo fazer um pão com manteiga para seu café da manhã.
+
+~~~~
+Fazer um pão com manteiga*  
+Início  
+ 1. Pegue 1 pão  
+ 2. Pegue uma faca  
+ 3. Abra o pão ao meio utilizando a faca  
+ 4. Pegue o pote de manteiga  
+ 5. Abra o pote de manteiga  
+ 6. Use a faca para passar a manteiga na parte interna do pão  
+ 7. Feche o pote de manteiga  
+ 8. Feche o pão  
+ 9. Sirva o pão  
+Fim
+~~~~
+
+2. **Tipo de Dados**
+
+Um tipo de dado nada mais que é algo do mundo real que pode ser representado computacionalmente. Por exemplo, os números que pertencem ao conjunto dos números inteiros, os números que pertencem ao conjunto dos números reais, letras, caracteres especiais, acentuação, pontuação, palavras, etc.
+
+As linguagens de programação implementam formas de representar e manipular esses dados, que podem ser classificados em dois grandes grupos: os tipos de dados primitivos e os tipos de dados não primitivos.
+
+2.2 **Tipo de Dados Primitivos**
+
+Os tipos de dados primitivos são os tipos básicos que devem ser implementados por todas as linguagens de programação, como os números reais, inteiros, booleanos, caracteres e strings.
+
+*Inteiros*
+
+int - para números inteiros
+
+*Float*
+
+float - para números fracionado
+
+*Booleanos*
+
+bool - armazena True ou False
+
+*Strings*
+
+str - para conjunto de caracteres
+
+2.3 **Tipo de Dados Não Primitivos**
+
+Os tipos de dados não primitivos, normalmente são os vetores, matrizes, classes, enumerações, etc., que costumam ser estruturas de dados mais complexas do que os tipos de dados primitivos.
+
+*Vetor*
+
+Um vetor é uma variável composta unidimensional formada por uma sequência de variáveis, todas do mesmo tipo, com o mesmo nome e alocadas sequencialmente na memória. Uma vez que as variáveis têm o mesmo nome, o que as distingue é um índice, que referencia sua localização dentro da estrutura.
+
+Em python é chamado de `lista`.
+
+~~~~python
+lista_python = ['banana','laranja','maçã']
+~~~~
+
+Uma matriz é uma coleção de variáveis de mesmo tipo, com mesmo nome e alocadas sequencialmente na memória. Uma vez tendo o mesmo nome, o que as distingue são índices que referenciam sua localização dentro da estrutura.
+
+As matrizes podem ser tanto unidimensionais (vetores) como multidimensionais.
+
+Em python as matrizes são demonstradas com `listas` dentro de `listas`
+
+~~~~python
+linhas = [0]*5
+print(linhas)
+colunas= [linhas] * 5
+print(colunas)
+~~~~
+
+3. **Variáveis e Constantes**
+
+Programas de computador utilizam os recursos de hardware mais básicos para executar algoritmos. Enquanto o processador executa os cálculos, a memória é responsável por armazenar dados e servi-los ao processador.
+
+O recurso que nós utilizamos em nossos programas para escrever e ler dados da memória do computador é conhecido como variável, que é simplesmente ***um espaço na memória o qual reservamos e damos um nome***. Por exemplo, podemos criar uma variável chamada “idade” para armazenar a idade de uma pessoa.
+
+Você pode imaginar uma variável como uma gaveta “etiquetada” em um armário.
+
+Chamamos este espaço alocado na memória de variável, porque o valor armazenado neste espaço de memória pode ser alterado ao longo do tempo, ou seja, o valor ali alocado é “variável” ao longo do tempo. Diferente das ***constantes***, que é um espaço reservado na memória para armazenar um valor que não muda com o tempo. Por exemplo, o valor PI (3.14159265359…) que nunca vai mudar.
+
+4. **Declaração de Variáveis**
+
+Declarar uma variável significa informar ao computador que reserve um espaço na memória para armazenar um determinado tipo de dado e que este espaço será identificado por um nome. Exemplo em pseudocódigo:
+
+~~~~
+x: inteiro
+x = 10
+~~~~
+Em Python, você não precisa declarar explicitamente o tipo de uma variável. Basta atribuir um valor a ela para criar uma variável. O tipo é inferido automaticamente.
+
+5. **Estruturas de Controle**
+
+São mecanismos utilizados para controlar o fluxo de execução do programa.
+
+As principais estruturas são:
+
+5.1 **Estruturas condicionais**
+
+Permitem tomar decisões com base em condições.
+
+Exemplos de estruturas condicionais são o "if", "else" e "switch case".
+
+5.2 **Estruturas de repetição**
+
+Permitem repetir um conjunto de instruções várias vezes.
+
+Exemplos de estruturas de repetição são o "for", "while" e "do-while".
+
+6. **Funções**
+
+Uma função é um bloco de código que executa alguma operação. Opcionalmente, uma função pode definir parâmetros de entrada que permitem que os chamadores passem argumentos para a função. Uma função também pode retornar um valor como saída. As funções são úteis para encapsular operações comuns em um só bloco reutilizável, idealmente com um nome que descreve de modo claro o que a função faz.
+
+Funções em Python são definidas por meio da seguinte sintaxe:
+
+~~~~python
+def nomedafuncao(parametro1, parametro2, ...):
+    corpodafuncao
+~~~~
+
+> [Curso Guanabara Lógica de Programação - Curso em Video](https://www.cursoemvideo.com/curso/curso-de-algoritmo/)
+
+> [YouTube Guanabara - Curso Lógica Programação](https://youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n)
+
+> [Curso Lógica de Programação - Alura](https://www.alura.com.br/planos-cursos-online)
+
+> [O que é lógica de Programação](https://medium.com/interage/logica-de-programacao-o-basico-para-voce-comecar-a-programar-1dd50d981698)
+
 ## Git e GitHub
 
-Aprender como funciona o Git e Github.
+1. **Git**
 
-> [Youtube Ignôrancia Zero - Git e Github - Setup](https://youtu.be/alxRKszfTck)
+É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo (Exemplo: alguns livros digitais são disponibilizados no GitHub e escrito aos poucos publicamente). O Git foi inicialmente projetado e desenvolvido por Linus Torvalds para o desenvolvimento do kernel Linux, mas foi adotado por muitos outros projetos.
 
-> [Youtube Ignôrancia Zero - Curso Git e Github](https://youtube.com/playlist?list=PLfCKf0-awunORbTiGbKnp7MlkXbT5lk1y)
+Cada diretório de trabalho do Git é um repositório com um histórico completo e habilidade total de acompanhamento das revisões, não dependente de acesso a uma rede ou a um servidor central. O Git também facilita a reprodutibilidade científica em uma ampla gama de disciplinas, da ecologia à bioinformática, arqueologia à zoologia.
 
-> [Alex - Comandos básicos para Git Bash](https://github.com/lexusmem/Comandos_Git_Cmd.git)
+O Git é um software livre, distribuído sob os termos da versão 2 da GNU General Public License. Sua manutenção é atualmente supervisionada por Junio Hamano.
+
+2. **GitHub**
+
+É uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git. Ele permite que programadores, utilitários ou qualquer usuário cadastrado na plataforma contribuam em projetos privados e/ou Open Source de qualquer lugar do mundo. GitHub é amplamente utilizado por programadores para divulgação de seus trabalhos ou para que outros programadores contribuam com o projeto, além de promover fácil comunicação através de recursos que relatam problemas ou misturam repositórios remotos (issues, pull request).
+
+> [Youtube Ignorância Zero - Git e Github - Setup](https://youtu.be/alxRKszfTck)
+
+> [Youtube Ignorância Zero - Curso Git e Github](https://youtube.com/playlist?list=PLfCKf0-awunORbTiGbKnp7MlkXbT5lk1y)
 
 > [Curso Git e GitHub Guanabara - Curso em Video](https://www.cursoemvideo.com/curso/curso-de-git-e-github/)
+
+> [Alex - Comandos básicos para Git Bash](https://github.com/lexusmem/Comandos_Git_Cmd.git)
 
 ## HTML e CSS
 
@@ -351,7 +500,7 @@ Aprender através do curso do Gustavo Guanabara no Youtube.
 
 > [Curso Html e Css3 Guanabara - Curso em Video](https://www.cursoemvideo.com/curso/html5-css3-modulo1/)
 
-Para aprender conceitos basicos de flexbox e grid layout utilizar o site para aprender.
+Para aprender conceitos básicos de flexbox e grid layout utilizar o site para aprender.
 
 > [Dica - Site desafios Grid e Flexbox](https://codingfantasy.com/games/flexboxadventure)
 
@@ -366,17 +515,7 @@ Nesta fase deve ser criado sites deve tentar copiar sites para treinar tudo que 
 
 > [Dica - Site desafios FrontEnd por nível.](https://www.frontendmentor.io/challenges)
 
-## Lógica de Progamação
-
-Aprender lógica através do Portugol ou junto da linguagem de programação que definir aprender.
-
-> [Curso Guanabara Lógica de Programação - Curso em Video](https://www.cursoemvideo.com/curso/curso-de-algoritmo/)
-
-> [YouTube Guanabara - Curso Lógica Programação](https://youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n)
-
-> [Curso Lógica de Programação - Alura](https://www.alura.com.br/planos-cursos-online)
-
-## Lingagem de programação
+## Linguagem de programação
 
 Foi indicado JS (JavaScript) porém não abro mão do Python.
 
