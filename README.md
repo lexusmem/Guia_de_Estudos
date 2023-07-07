@@ -509,7 +509,7 @@ Para aprender conceitos básicos de flexbox e grid layout utilizar o site para a
 
 Aprenda sobre uma coleção de estilos pré-definidos ecomponente reutilizaveis através do Bootstrap.
 
-## Cria e Copiar
+## Criar e Copiar
 
 Nesta fase deve ser criado sites deve tentar copiar sites para treinar tudo que está aprendendo.
 
@@ -519,11 +519,11 @@ Nesta fase deve ser criado sites deve tentar copiar sites para treinar tudo que 
 
 Foi indicado JS (JavaScript) porém não abro mão do Python.
 
-* ## JavaScript  
+## JavaScript  
 
 > [Dica - Site desafios JavaScript.](https://www.jschallenger.com/)
 
-* ## Python
+## Python
 
 Lista de aprendizado para Python
 
@@ -569,6 +569,179 @@ Podemos iniciar as variáveis com o valor "None".
 ~~~~Python
 reais  =  None
 ~~~~
+
+1.3 **Conceitos Importantes para Python**
+
+Abaixo alguns conceitos importantes d linguagem de programação python.
+
+1.3.1 ***Variáveis Mutáveis e Imutáveis***
+
+Em python as variáveis dos tipos `int`, `float`, `tuple` e `str` são imutáveis.
+
+No exemplo abaixo a variável criada `faturamento` não sofre alteração e sim ela é recriada com um novo valor.
+
+~~~~python
+# Variável do tipo int
+faturamento = 1500
+print(faturamento)
+faturamento = faturamento * 2
+~~~~
+
+Para exemplificar melhor no exemplo abaixo ao tentar alterar o primeiro item da tupla `tvendas` gera erro `TypeError: 'tuple' object does not support item assignment` devido a tupla ser imutável.
+
+~~~~python
+# Variável do tipo tuple
+tvendas = (250, 320, 410)
+tvendas[0] = 367
+tvendas.append (1000)
+print(tvendas)
+print(type(tvendas))
+~~~~
+
+Já as variáveis do tipo listas `list` e dicionários `dir` são mutáveis podendo os dados das variáveis serem editadas.
+
+~~~~python
+# Variável do tipo list
+lvendas = [250, 320, 410]
+lvendas[0] = 367
+lvendas.append (1000)
+print(lvendas)
+print(type(lvendas))
+~~~~
+
+1.3.2 ***Parâmetros e Argumentos de Funções***
+
+As funções podem ser criadas possuindo ou não parâmetros/argumentos.
+
+Exemplo de função sem parâmetros:
+
+~~~~python
+def calcular_imposto()
+    print ("Imposto calculado")
+~~~~
+
+Exemplo de função com parâmetros:
+
+~~~~python
+def calcular_imposto(preco, taxa):
+    imposto = preco * taxa
+    print(f"Preço: {preco} e Taxa {taxa}.")
+    return imposto
+~~~~
+
+Existem 3 tipos de argumentos *posicional*, *keyword* e *opcional*.
+
+No exemplo com parâmetros é obrigatório ser informado os dados de `preco` e `taxa` para que a função funcione para que funcione deve ser informado de forma posiciona em que os valores devem seguir a ordem dos argumentos `preco` e `taxa`:
+
+~~~~python
+# Argumentos informados de forma posicional
+imposto = calcular_imposto(1500, 0.2)
+print(imposto)
+~~~~
+
+Ou podendo os argumentos ser setados com os nomes das palavras chaves dos argumentos das funções, utilizando o keyword. Neste caso não precisa seguir a ordem dos argumentos das funções:
+
+~~~~python
+# Argumentos informados com as palavras chaves das funções com as Keywords
+imposto = calcular_imposto(taxa = 0.2, preco = 1500)
+print(imposto)
+~~~~
+
+E por ultimo o argumento pode ser opcional devendo ele ser atribuído com valor null `None`.
+
+~~~~python
+def calcular_imposto_n(preco, taxa, outro_valor = None):
+    imposto = preco * taxa
+    print(f"Preço: {preco}, Taxa {taxa} e Outro Valor: {outro_valor}.")
+    return imposto
+
+# Argumentos opcional None
+imposto = calcular_imposto(1500, taxa = 0.2)
+print(imposto)
+~~~~
+
+1.3.3 ***if __name__ == "__main__":***
+
+Ao construir uma função que será utilizadas em outro códigos devemos criar o teste no arquivo da função após um estrutura condicional que identifica se o arquivo que esta executando a função é o `main` (principal) para que o teste somente seja executado no arquivo da função.
+
+Exemplo:
+
+~~~~python
+def calcular_imposto_n(preco, taxa):
+    imposto = preco * taxa
+    return imposto
+
+if __name__ == "__main__":
+    print(calcular_imposto_n(1500, 0.2))
+~~~~
+
+1.3 **Comentários em Python**
+
+1.4 **Tipos de Dados Básicos**
+
+1.5 **Operadores**
+
+
+
+**2. Estruturas de controle de Fluxo**
+
+2.1 **Estruturas Condicionais**
+
+If, Elif, Else
+
+Além das estruturas condicionais básicas, Python também oferece recursos adicionais para manipular condições mais complexas.
+
+Operador Ternário:
+
+O operador ternário é uma forma concisa de expressar uma estrutura condicional em uma única linha. Ele é útil quando você precisa tomar uma decisão simples com base em uma condição. 
+
+Operador "in":
+
+O operador "in" é usado para verificar se um elemento está presente em uma sequência, como uma lista, uma string ou uma tupla.
+
+Encadeamento de Condições:
+
+Você pode encadear múltiplas condições usando os operadores "and" e "or" para criar expressões mais complexas. 
+
+2.2 **Estruturas de Repetição**
+
+While
+
+A estrutura "while" é usada para repetir um bloco de código enquanto uma condição específica for verdadeira
+
+É importante ter cuidado ao usar um "while" para evitar criar um loop infinito. Certifique-se de que a condição será eventualmente falsa para que o loop seja interrompido.
+
+For
+
+A estrutura "for" é usada para percorrer elementos de uma sequência, como uma lista, uma string, uma tupla, entre outros.
+
+Além disso, você também pode usar a função "range()" em conjunto com o "for" para gerar uma sequência numérica.
+
+Python oferece recursos adicionais para manipular loops e controlar o fluxo de execução.
+
+Controle do Loop com "break" e "continue":
+
+Dentro de um loop, você pode usar a instrução "break" para interromper o loop prematuramente, mesmo se a condição ainda for verdadeira.
+
+Já a instrução "continue" permite pular a iteração atual e continuar para a próxima.
+
+Uso do "else" no Loop:
+
+Em Python, você pode usar a cláusula "else" em um loop para especificar um bloco de código a ser executado quando o loop for concluído sem ser interrompido por uma instrução "break".
+
+Iteração com "enumerate":
+
+A função "enumerate" permite iterar sobre uma sequência ao mesmo tempo em que acompanha o índice de cada elemento.
+
+frutas = ["maçã", "banana", "laranja"]
+for indice, fruta in enumerate(frutas):
+    print(indice, fruta)
+
+
+
+2.3 **Estruturas de Controle de Exceções**
+
+try, except, finally
 
 **2. Funções em Python**
 
