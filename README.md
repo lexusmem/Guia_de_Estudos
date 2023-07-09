@@ -535,7 +535,7 @@ Aprenda a estrutura básica de um programa Python, incluindo variáveis, tipos d
 
 > [Python - O Básico da Sintaxe](http://devfuria.com.br/python/sintaxe-basica/)
 
-1.1 ***Declaração de variavéis***
+1.1 ***Declaração de variáveis***
 
 Exemplo:
 ~~~~Python
@@ -570,11 +570,195 @@ Podemos iniciar as variáveis com o valor "None".
 reais  =  None
 ~~~~
 
-1.3 **Conceitos Importantes para Python**
+1.3 ***Comentários em Python***
+
+ Comentários em Python começam com o caractere cerquilha `#` e estende até o final da linha. Um comentário pode aparecer no inicio da linha ou após espaço em branco ou código, mas não dentro de uma string literal. 
+
+1.4 ***Tipos de Dados Básicos***
+
+Python possui diversos tipos de dados básicos. 
+
+Abaixo lista completa.
+
+*Números inteiros*
+
+`int`- representam números inteiros, como 1, 10, -5.
+
+*Números de ponto flutuante*
+
+`float` - Representam números decimais, como 3.14, 2.5.
+
+*Números complexos*
+
+`complex` - representam números complexos na forma a + bj, onde a e b são números reais e j é a unidade imaginária (√-1). Exemplos: 1+2j, -3+4j.
+
+*Booleanos*
+
+`bool` - representam valores verdadeiro (True) ou falso (False). São usados para expressar condições lógicas.
+
+*Strings*
+
+`str` - representam sequências de caracteres. Podem ser delimitados por aspas simples ('') ou aspas duplas ("").
+
+*Listas*
+
+`list` - representam coleções ordenadas e mutáveis de elementos.
+
+*Tuplas*
+
+`tuple` - são semelhantes a listas, mas são imutáveis.
+
+*Conjuntos*
+
+`set` - representam coleções não ordenadas de elementos únicos.
+
+*Dicionários*
+
+`dict` - representam coleções de pares chave-valor.
+
+*Bytes*
+
+`bytes` - representam sequências de bytes, são tipo de dados imutáveis.
+
+~~~~python
+# Uma sequência de bytes representando a palavra 'Hello'
+dados_1 = b'\x48\x65\x6c\x6c\x6f'
+print(dados_1)  # Saída: b'Hello'
+print(type(dados_1))  # Saída: <class 'bytes'>
+~~~~
+
+*Bytearrays*
+
+`bytearray` - são semelhantes aos bytes, mas são mutáveis.
+
+~~~~python
+# Um bytearray com a sequência de bytes 'Hello'
+dados_2 = bytearray(b'\x48\x65\x6c\x6c\x6f')
+print(dados_2)  # Saída: bytearray(b'Hello')
+
+# Alterando o primeiro byte para o valor
+# hexadecimal 0x41 (representa o caractere 'A')
+dados_2[0] = 0x41
+print(dados_2)  # Saída: bytearray(b'Aello')
+print(type(dados_2))  # Saída: <class 'bytearray'>
+~~~~
+
+Esses são os tipos de dados básicos em Python. Cada tipo de dado tem suas características e métodos específicos. É importante entender esses tipos para poder trabalhar com eficiência no desenvolvimento de programas Python.
+
+1.5 **Operadores**
+
+Em Lógica de Programação e Algoritmos, Operadores são símbolos que dizem ao compilador para realizar manipulações (operações) matemáticas, lógicas e de comparação específicas.
+
+Aqui está uma lista completa dos operadores disponíveis em Python, divididos em categorias:
+
+1.5.1 ***Operadores Aritméticos***
+
+São usados na realização de cálculos aritméticos simples, usando as quatro operações básicas da matemática mais operações como o módulo.
+
+   - `+` (adição)
+   - `-` (subtração)
+   - `*` (multiplicação)
+   - `/` (divisão)
+   - `%` (resto da divisão)
+   - `**` (exponenciação)
+   - `//` (divisão inteira)
+
+1.5.2 ***Operadores de Atribuição***
+
+São operadores empregados para realizar a atribuição de valores entre os operandos, como por exemplo a atribuição de um valor a uma variável.
+
+   - `=` (atribuição simples)
+   - `+=` (atribuição com adição)
+   - `-=` (atribuição com subtração)
+   - `*=` (atribuição com multiplicação)
+   - `/=` (atribuição com divisão)
+   - `%=` (atribuição com resto da divisão)
+   - `**=` (atribuição com exponenciação)
+   - `//=` (atribuição com divisão inteira)
+
+1.5.3 ***Operadores de Comparação***
+
+Permitem estabelecer uma relação entre dois valores (operandos). Funcionam com quaisquer tipos de dados – desde que os operandos sejam do mesmo tipo.
+Comparam o valor à esquerda com o valor à direita do operador, retornando um valor lógico (verdadeiro ou falso) de acordo com o resultado da comparação.
+
+São também conhecidos como Operadores Relacionais.
+
+   - `==` (igual a)
+   - `!=` (diferente de)
+   - `>` (maior que)
+   - `<` (menor que)
+   - `>=` (maior ou igual a)
+   - `<=` (menor ou igual a)
+
+1.5.4 ***Operadores Lógicos***
+
+Os operadores lógicos recebem valores booleanos (verdadeiro ou falso) como entrada e retornam valores também booleanos como saída. São úteis para trabalhar com múltiplas condições relacionais na mesma expressão
+
+   - `and` (e lógico)
+   - `or` (ou lógico)
+   - `not` (negação lógica)
+
+1.5.5 ***Operadores de Identidade***
+
+Os Operadores de Identidade são usados para comparar a identidade de dois objetos, ou seja, se eles se referem ao mesmo objeto na memória.
+
+Esses operadores de identidade são usados para comparar a identidade de objetos, ou seja, se eles estão armazenados na mesma posição de memória. Eles retornam um valor booleano `True` se a condição for satisfeita e `False` caso contrário. Esses operadores são úteis para verificar se duas variáveis se referem ao mesmo objeto, em vez de comparar seus valores.
+
+   - `is` (verifica se dois objetos são o mesmo objeto)
+   - `is not` (verifica se dois objetos não são o mesmo objeto)
+
+1.5.6 ***Operadores de Associação em Membro***
+
+Os Operadores de Associação em Membro são usados para verificar se um valor está presente em uma sequência (como uma lista, tupla ou string) ou não.
+
+Esses operadores são usados para realizar verificações de pertencimento em sequências. Eles retornam um valor booleano `True` se a condição for satisfeita e `False` caso contrário. Esses operadores podem ser úteis para realizar ações condicionais com base na presença ou ausência de um valor específico em uma sequência.
+
+   - `in` (verifica se um valor está presente em uma sequência)
+   - `not in` (verifica se um valor não está presente em uma sequência)
+
+1.5.7 ***Operadores de Bit a Bit***
+
+Os operadores bit-a-bit convertem valores numéricos inteiros fornecidos dados em binário e, em seguida, executam a operação requisitada, retornando o resultado em representação decimal.
+
+   - `&` (AND bit a bit)
+   - `|` (OR bit a bit)
+   - `^` (XOR bit a bit)
+   - `~` (complemento de um bit)
+   - `<<` (deslocamento de bits para a esquerda)
+   - `>>` (deslocamento de bits para a direita)
+
+Esses são os operadores disponíveis em Python. Eles são usados para realizar diferentes operações em variáveis e valores, dependendo do contexto em que são utilizados. Lembre-se de que a ordem de precedência dos operadores pode afetar o resultado das expressões, e você também pode usar parênteses para controlar a ordem de avaliação.
+
+Abaixo ordem de precedência dos operadores em Python, do mais alto para o mais baixo:
+
+Parênteses: ()
+Os parênteses podem ser usados para controlar a ordem de avaliação e definir grupos de operações.
+
+Exponenciação: **
+O operador de exponenciação calcula a potência de um número.
+
+Multiplicação, Divisão, Divisão Inteira, Resto da Divisão: *, /, //, %
+Esses operadores realizam as operações matemáticas usuais de multiplicação, divisão, divisão inteira (quociente da divisão sem a parte fracionária) e resto da divisão.
+
+Adição e Subtração: +, -
+Esses operadores realizam as operações matemáticas usuais de adição e subtração.
+
+Comparação: ==, !=, >, <, >=, <=, is, is not, in, not in
+Esses operadores são usados para realizar comparações entre valores e verificar igualdade, diferença, maior que, menor que, maior ou igual, menor ou igual, identidade de objeto e associação em membro.
+
+Operadores de Bit a Bit: &, |, ^, ~, <<, >>
+Esses operadores realizam operações de bit a bit em valores numéricos.
+
+Operadores Lógicos: not, and, or
+Esses operadores são usados para realizar operações lógicas em valores booleanos.
+
+Lembre-se de que é possível alterar a ordem de avaliação utilizando parênteses para garantir que as operações sejam executadas na ordem desejada. Além disso, é sempre uma boa prática utilizar parênteses para tornar o código mais legível e evitar ambiguidades.
+
+2 **Conceitos Importantes para Python**
 
 Abaixo alguns conceitos importantes d linguagem de programação python.
 
-1.3.1 ***Variáveis Mutáveis e Imutáveis***
+2.1 ***Variáveis Mutáveis e Imutáveis***
 
 Em python as variáveis dos tipos `int`, `float`, `tuple` e `str` são imutáveis.
 
@@ -609,7 +793,7 @@ print(lvendas)
 print(type(lvendas))
 ~~~~
 
-1.3.2 ***Parâmetros e Argumentos de Funções***
+2.2 ***Parâmetros e Argumentos de Funções***
 
 As funções podem ser criadas possuindo ou não parâmetros/argumentos.
 
@@ -660,7 +844,7 @@ imposto = calcular_imposto(1500, taxa = 0.2)
 print(imposto)
 ~~~~
 
-1.3.3 ***if __name__ == "__main__":***
+2.3 ***if __name__ == "__main__":***
 
 Ao construir uma função que será utilizadas em outro códigos devemos criar o teste no arquivo da função após um estrutura condicional que identifica se o arquivo que esta executando a função é o `main` (principal) para que o teste somente seja executado no arquivo da função.
 
@@ -674,14 +858,6 @@ def calcular_imposto_n(preco, taxa):
 if __name__ == "__main__":
     print(calcular_imposto_n(1500, 0.2))
 ~~~~
-
-1.3 **Comentários em Python**
-
-1.4 **Tipos de Dados Básicos**
-
-1.5 **Operadores**
-
-
 
 **2. Estruturas de controle de Fluxo**
 
