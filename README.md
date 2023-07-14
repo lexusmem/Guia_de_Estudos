@@ -990,41 +990,144 @@ Nesse exemplo, a primeira condição verifica se a idade é maior ou igual a 18 
 
 2.2 **Estruturas de Repetição**
 
-[Chat GPT - Estruturas de Repetição](https://chat.openai.com/c/063a5d74-03f0-4ccf-884f-558e9253058e)
+As estruturas de repetição são recursos das linguagens de programação responsáveis por executar um bloco de código repetidamente através de determinadas condições especificas.
 
-While
+O Python contém dois tipos de estruturas de repetição: `while` e `for`.
 
-A estrutura "while" é usada para repetir um bloco de código enquanto uma condição específica for verdadeira
+2.2.1 ***While***
 
-É importante ter cuidado ao usar um "while" para evitar criar um loop infinito. Certifique-se de que a condição será eventualmente falsa para que o loop seja interrompido.
+A estrutura `while` é usada para repetir um bloco de código enquanto uma condição específica for verdadeira
 
-For
+É importante ter cuidado ao usar um `while` para evitar criar um loop infinito. 
 
-A estrutura "for" é usada para percorrer elementos de uma sequência, como uma lista, uma string, uma tupla, entre outros.
+Certifique-se de que a condição será eventualmente falsa para que o loop seja interrompido.
 
-Além disso, você também pode usar a função "range()" em conjunto com o "for" para gerar uma sequência numérica.
+`While` é uma estrutura de repetição utilizada quando queremos que determinado bloco de código seja executado ENQUANTO (do inglês `While`) determinada condição for satisfeita.
+
+Em outras palavras: só saia da estrutura de repetição quando a condição não for mais satisfeita.
+
+Sua sintaxe básica é:
+
+~~~~python
+while <condição>:
+    # Bloco a ser executado
+~~~~
+
+Aqui, <condição> é uma expressão que pode ser reduzida à `True` ou `False`, podendo ser:
+
+* A verificação do valor de uma variável;
+* Determinada estrutura de dados alcançar um tamanho;
+* O retorno de uma função se igualar a determinado valor;
+* Algum valor externo ser alterado (por exemplo um valor armazenado em Banco de Dados).
+
+Vamos entender melhor com um exemplo:
+
+~~~~python
+contador = 0
+
+while contador < 10:
+    print(f'Valor do contador é {contador}')
+    contador += 1
+~~~~
+
+Ou seja, a variável contador está sendo incrementada a cada vez que o while executa seu código.
+
+Quando ele alcançar o valor 10, a condição contador < 10 não será mais satisfeita, finalizando o bloco while!
+
+Assim como no for, podemos utilizar o else também nos loops while.
+
+Vamos usar o mesmo código do exemplo acima para você entender a diferença:
+
+~~~~python
+contador = 0
+
+while contador < 10:
+    contador += 1
+    print(f'Valor do contador é {contador}')    
+else:
+    print(f'Fim do while e o valor do contador é {contador}')
+~~~~
 
 Python oferece recursos adicionais para manipular loops e controlar o fluxo de execução.
 
-Controle do Loop com "break" e "continue":
+Controle do Loop com `break` e `continue`:
 
-Dentro de um loop, você pode usar a instrução "break" para interromper o loop prematuramente, mesmo se a condição ainda for verdadeira.
+Dentro de um loop, você pode usar a instrução `break` para interromper o loop prematuramente, mesmo se a condição ainda for verdadeira.
 
-Já a instrução "continue" permite pular a iteração atual e continuar para a próxima.
+Já a instrução `continue` permite pular a iteração atual e continuar para a próxima.
 
-Uso do "else" no Loop:
+~~~~python
+x = 0
+while x < 10:
+    if x == 3:
+        x += 1
+        continue  # Pula a iteração quando x = 3
+    if x == 6:
+        break  # Interrompe o loop quando x = 6
+    print(x)
+    x += 1
+~~~~
 
-Em Python, você pode usar a cláusula "else" em um loop para especificar um bloco de código a ser executado quando o loop for concluído sem ser interrompido por uma instrução "break".
+2.2.2 ***For***
 
-Iteração com "enumerate":
+A estrutura `for` é usada para percorrer elementos de uma sequência, como uma lista, uma string, uma tupla, entre outros.
 
-A função "enumerate" permite iterar sobre uma sequência ao mesmo tempo em que acompanha o índice de cada elemento.
+~~~~python
+frutas = ["maçã", "banana", "laranja"]
+for fruta in frutas:
+    print(fruta)
+~~~~
 
+Nesse exemplo, o bloco de código dentro do "for" será executado para cada elemento da lista "frutas". Em cada iteração, o elemento atual é atribuído à variável "fruta" e, em seguida, é impresso na tela. O resultado será a impressão de cada fruta da lista.
+
+Além disso, você também pode usar a função `range()` em conjunto com o `for` para gerar uma sequência numérica.
+
+~~~~python
+for i in range(5):
+    print(i)
+~~~~
+
+Nesse caso, o bloco de código dentro do "for" será executado para cada número de 0 a 4. O valor atual do número é atribuído à variável "i" e é impresso na tela.
+
+Python oferece recursos adicionais para manipular loops e controlar o fluxo de execução.
+
+Controle do Loop com `break` e `continue`:
+
+Dentro de um loop, você pode usar a instrução `break` para interromper o loop prematuramente, mesmo se a condição ainda for verdadeira.
+
+Já a instrução `continue` permite pular a iteração atual e continuar para a próxima.
+
+~~~~python
+for i in range(10):
+    if i == 3:
+        continue  # Pula a iteração quando i = 3
+    if i == 6:
+        break  # Interrompe o loop quando i = 6
+    print(i)
+~~~~
+
+Uso do `else` no Loop:
+
+Em Python, você pode usar a cláusula `else` em um loop para especificar um bloco de código a ser executado quando o loop for concluído sem ser interrompido por uma instrução `break`.
+
+~~~~python
+for i in range(5):
+    print(i)
+else:
+    print("Loop concluído sem interrupção.")
+~~~~
+
+Iteração com `enumerate`:
+
+A função `enumerate` permite iterar sobre uma sequência ao mesmo tempo em que acompanha o índice de cada elemento.
+
+~~~~python
 frutas = ["maçã", "banana", "laranja"]
 for indice, fruta in enumerate(frutas):
     print(indice, fruta)
+~~~~
 
-
+Nesse exemplo, a função `enumerate` é usada para percorrer a lista `frutas`. Em cada iteração, a variável `indice` recebe o índice atual e a variável `fruta` recebe o elemento correspondente. Os valores do índice e da fruta são impressos na tela.
 
 2.3 **Estruturas de Controle de Exceções**
 
