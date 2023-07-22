@@ -1131,17 +1131,126 @@ Nesse exemplo, a função `enumerate` é usada para percorrer a lista `frutas`. 
 
 2.3 **Estruturas de Controle de Exceções**
 
-try, except, finally
+As estruturas de controle de exceções em Python permitem lidar com erros e exceções durante a execução do programa, evitando que o código seja interrompido abruptamente. Essas estruturas são representadas pelos blocos `try`, `except` e, opcionalmente, `else` e `finally`. Aqui está uma explicação detalhada com exemplos:
 
-**2. Funções em Python**
+2.3.1 ***Bloco "try" e "except"***
+
+O bloco `try` é usado para envolver o código que pode gerar exceções. Se alguma exceção ocorrer dentro do bloco `try`, ela será capturada e tratada no bloco `except`. Exemplo:
+
+~~~~python
+try:
+    numero = int(input("Digite um número inteiro: "))
+    resultado = 10 / numero
+    print("Resultado:", resultado)
+except ZeroDivisionError:
+    print("Erro: Divisão por zero.")
+except ValueError:
+    print("Erro: Digite um número inteiro válido.")
+~~~~
+
+Nesse exemplo, o usuário é solicitado a inserir um número inteiro. Se o usuário digitar um valor inválido ou zero, o bloco `except` apropriado será executado, mostrando uma mensagem de erro específica para cada tipo de exceção.
+
+2.3.2 ***Bloco "else"***
+
+O bloco `else` é executado se nenhuma exceção for lançada no bloco `try`. É útil para executar um código quando tudo ocorre conforme o esperado. Exemplo:
+
+~~~~python
+try:
+    numero = int(input("Digite um número inteiro: "))
+    resultado = 10 / numero
+except ZeroDivisionError:
+    print("Erro: Divisão por zero.")
+except ValueError:
+    print("Erro: Digite um número inteiro válido.")
+else:
+    print("Resultado:", resultado)
+~~~~
+
+Nesse exemplo, se o usuário digitar um número válido e diferente de zero, o bloco `else` será executado, mostrando o resultado da divisão.
+
+2.3.2 ***Bloco "finally"***
+
+O bloco `finally` é sempre executado, independentemente de haver ou não uma exceção no bloco `try`. É usado para executar código que precisa ser feito, independentemente de ocorrer uma exceção. Exemplo:
+
+~~~~python
+try:
+    arquivo = open("arquivo.txt", "r")
+    conteudo = arquivo.read()
+    print(conteudo)
+except FileNotFoundError:
+    print("Erro: Arquivo não encontrado.")
+finally:
+    arquivo.close()
+~~~~
+
+Nesse exemplo, o bloco `finally` é usado para garantir que o arquivo seja fechado, mesmo que ocorra uma exceção ao tentar abrir o arquivo.
+
+2.3.3 ***Capturando a Exceção***
+
+Você pode capturar a própria exceção e obter informações sobre ela. Isso é útil quando você precisa tomar decisões com base no tipo de exceção ocorrida. Para fazer isso, você pode atribuir a exceção a uma variável após o `except`. Exemplo:
+
+~~~~python
+try:
+    numero = int(input("Digite um número inteiro: "))
+    resultado = 10 / numero
+except Exception as erro:
+    print("Ocorreu uma exceção:", erro)
+~~~~
+
+Nesse exemplo, a exceção é capturada e atribuída à variável `erro`. Você pode então imprimir ou usar informações sobre a exceção, se necessário.
+
+2.3.4 ***Exceções Personalizadas***
+
+Em Python, você também pode criar exceções personalizadas para situações específicas do seu programa. Para isso, basta criar uma nova classe que herde de `Exception` ou de outra classe de exceção. Exemplo:
+
+~~~~python
+class MeuErro(Exception):
+    pass
+
+try:
+    raise MeuErro("Isso é uma exceção personalizada.")
+except MeuErro as erro:
+    print(erro)
+~~~~
+
+Nesse exemplo, criamos uma classe de exceção personalizada chamada `MeuErro` e, em seguida, a lançamos usando a palavra-chave `raise`. No bloco `except`, capturamos e tratamos a exceção personalizada.
+
+2.3.5 ***Bloco `assert`***
+
+O bloco `assert` é usado para verificar uma condição e lançar uma exceção se a condição for falsa. É útil para testar suposições durante o desenvolvimento. Exemplo:
+
+~~~~python
+valor = 10
+assert valor > 0, "O valor deve ser maior que zero."
+~~~~
+
+Nesse exemplo, se a variável "valor" for menor ou igual a zero, uma exceção será lançada com a mensagem especificada.
+
+2.3.6 ***Capturando Múltiplas Exceções***
+
+Você também pode capturar múltiplas exceções em um único bloco `except` separando-as por vírgulas. Isso é útil quando você deseja tratar exceções semelhantes de maneiras diferentes. Exemplo:
+
+~~~~python
+try:
+    numero = int(input("Digite um número inteiro: "))
+    resultado = 10 / numero
+except (ZeroDivisionError, ValueError) as erro:
+    print("Ocorreu um erro:", erro)
+~~~~
+
+Nesse exemplo, o bloco `except` captura tanto a exceção `ZeroDivisionError` quanto a exceção `ValueError`, tratando-as da mesma maneira.
+
+Essas são as estruturas de controle de exceções em Python. Elas permitem que você lide com erros e exceções de maneira controlada, garantindo que seu código continue funcionando mesmo diante de situações inesperadas.
+
+**3. Funções em Python**
 
 Entenda como definir e chamar funções em Python.
 
-**3. Listas, tuplas e dicionários em Python**
+**4. Listas, tuplas e dicionários em Python**
 
 Familiarize-se com listas, tuplas e dicionários, e aprenda a manipulá-los.
 
-**4. Manipulação de arquivos em Python**
+**5. Manipulação de arquivos em Python**
 
 Arquivos e exceções: Aprenda a ler e escrever arquivos, bem como a lidar com exceções em Python.
 
